@@ -1,0 +1,209 @@
+Abel Berhane
+
+
+
+
+REST REQUEST HEADERS
+================
+-GET https://www.googleapis.com/books/v1/volumes?q=turing HTTP/1.1
+
+This requests data from the location https://www.googleapis.com. It queries the content
+so that you will only receive books that contain the title "Turing"
+
+
+-Accept-Encoding: gzip,deflate
+
+This shows that the client supports the gzip compression scheme
+
+
+-Host: www.googleapis.com
+
+The www.googleapis.com is the name of the domain on which the server is listening
+
+
+-Connection: Keep-Alive
+
+This means you are using a single connection for multiple http requests/responses
+
+
+-User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+Apache-HttpClient/4.1.1 is the client software used for this request 
+
+
+
+
+
+REST RESPONSE HEADERS
+=================
+
+-HTTP/1.1 200 OK
+
+This http request has been successful
+
+
+-Expires: Mon, 09 Feb 2015 05:49:00 GMT
+
+The date and time of the expiration of the http request is on 
+February 9th at 5:49 GMT
+
+
+-Date: Mon, 09 Feb 2015 05:49:00 GMT
+
+The date and time the message was sent.
+
+
+-Cache-Control: private, max-age=0, must-revalidate, no-transform
+
+This cannot be cached, you must revalidate everytime
+
+
+-ETag: "_rmWcTkH-s1QFjg9mC3Xel0FZSQ/gJIX7X5fuhQunJhy7nw4svzBJks"
+
+The mechanism used in determining whether the browser's cache matches the server.
+The specific version of the resource being requested
+
+
+-Vary: Origin
+
+There was a negotiation for the response was based on the Origin header value of the 
+request
+
+
+-Vary: X-Origin
+
+
+-Content-Type: application/json; charset=UTF-8
+
+This is a json format that accepts UTF-8 character sets
+
+
+-X-Content-Type-Options: nosniff
+
+Prevents Internet Explorer from MIME-sniffing a response from the content type
+
+
+-X-Frame-Options: SAMEORIGIN
+
+There is no rendering if there is an origin mismatch
+
+
+-X-XSS-Protection: 1; mode=block
+
+This is the cross-site scripting filter
+
+
+-Content-Length: 26982
+
+The length of the response body is 26982 octets
+
+
+-Server: GSE
+
+The name of the server is GSE
+
+
+-Alternate-Protocol: 443:quic,p=0.02
+
+The alternate protocol of the returned data
+
+
+
+
+SOAP REQUEST HEADERS
+====================
+
+-POST http://www.webservicex.net/geoipservice.asmx HTTP/1.1
+
+Requests data from the location http://www.webservicex.net
+
+
+-Accept-Encoding: gzip,deflate
+
+This shows that the client supports the gzip compression scheme
+
+
+-Content-Type: text/xml;charset=UTF-8
+
+The content is in xml format with UTF-8 character sets
+
+
+-SOAPAction: "http://www.webservicex.net/GetGeoIP"
+
+The intent of the SOAP http request
+
+
+-Content-Length: 317
+
+The length of the request body is 317 octets
+
+
+-Host: www.webservicex.net
+
+The domain name of the server is www.webservicex.net
+
+
+-Connection: Keep-Alive
+
+This means you are using a single connection for multiple http requests/responses
+
+
+-User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+Apache-HttpClient/4.1.1 is the client software used for this request
+
+
+
+
+SOAP RESPONSE HEADERS
+=====================
+
+-HTTP/1.1 200 OK
+
+This http request has been successful
+
+
+-Cache-Control: private, max-age=0
+
+This cannot be cached, you must revalidate everytime
+
+
+-Content-Type: text/xml; charset=utf-8
+
+The content is in xml format with UTF-8 character sets
+
+
+-Content-Encoding: gzip
+
+The content will be encoded in gzip format
+
+
+-Vary: Accept-Encoding
+
+Tells the procy to accept encoding future request headers. This decides if the 
+cached response can be used instead of a new one from the original server
+
+
+-Server: Microsoft-IIS/7.0
+
+The name of the server is Microsoft-IIS/7.0
+
+
+-X-AspNet-Version: 4.0.30319
+
+The ASP.NET version is 4.0.30319
+
+
+-X-Powered-By: ASP.NET
+
+The technology supporting the web application is ASP.NET
+
+
+-Date: Mon, 09 Feb 2015 07:05:44 GMT
+
+The date the message was sent
+
+
+-Content-Length: 403
+
+The length of the response body is 403 octets
