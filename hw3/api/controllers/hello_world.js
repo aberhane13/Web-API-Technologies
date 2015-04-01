@@ -1,4 +1,7 @@
 'use strict';
+
+var express = require('express');
+var app = express();
 /*
  'use strict' is not required but helpful for turning syntactical errors into true errors in the program flow
  http://www.w3schools.com/js/js_strict.asp
@@ -11,6 +14,7 @@
   It is a good idea to list the modules that your application depends on in the package.json in the project root
  */
 var util = require('util');
+
 
 /*
  Once you 'require' a module you can reference the things that it exports.  These are defined in module.exports.
@@ -34,11 +38,47 @@ module.exports = {
   Param 1: a handle to the request object
   Param 2: a handle to the response object
  */
-function hello(req, res) {
+/*function hello(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
   var name = req.swagger.params.name.value || 'stranger';
   var hello = util.format('Hello, %s!', name);
 
   // this sends back a JSON response which is a single string
   res.json(hello);
+}*/
+
+function hello(res) {
+    var GitHubApi = require("github");
+
+    var github = new GitHubApi({
+        // required
+        version: "3.0.0"
+    });
+
+    //github.authenticate({
+    //    type: "basic",
+    //    username: "shawnmccarthy",
+    //    password: "password"
+    //});
+
+    var token = "6ef79b2a2cec73c1513db6cea7d4ed26af3bc3db";
+
+    github.authenticate({
+        type: "oauth",
+        token: token
+    });
+
+    res.json(github.user.get({ user: 'aberhane13'} , function(err, res) {
+        console.log("GOT ERR?", err);
+        console.log("GOT RES?", res);
+
+        github.repos.getAll({}, function(err, res) {
+            console.log("GOT ERR?", err);
+            console.log("GOT RES?", res);
+        });
+    }));
+
+
 }
+
+
