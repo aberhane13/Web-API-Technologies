@@ -32,22 +32,9 @@ module.exports = {
   hello: hello
 };
 
-/*
-  Functions in a127 controllers used for operations should take two parameters:
 
-  Param 1: a handle to the request object
-  Param 2: a handle to the response object
- */
-/*function hello(req, res) {
-  // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'stranger';
-  var hello = util.format('Hello, %s!', name);
 
-  // this sends back a JSON response which is a single string
-  res.json(hello);
-}*/
-
-function hello(res) {
+function hello(req, res) {
     var GitHubApi = require("github");
 
     var github = new GitHubApi({
@@ -55,30 +42,24 @@ function hello(res) {
         version: "3.0.0"
     });
 
-    //github.authenticate({
-    //    type: "basic",
-    //    username: "shawnmccarthy",
-    //    password: "password"
-    //});
 
-    var token = "6ef79b2a2cec73c1513db6cea7d4ed26af3bc3db";
+    var token = "Enter token here";
+    var repos = "repos";
 
     github.authenticate({
         type: "oauth",
         token: token
     });
 
-    res.json(github.user.get({ user: 'aberhane13'} , function(err, res) {
-        console.log("GOT ERR?", err);
-        console.log("GOT RES?", res);
+    github.repos.getFromUser({user: 'aberhane13'}, function(err, res2) {
+      console.log("GOT ERR?", err);
+      console.log("GOT RES?", res2);
 
-        github.repos.getAll({}, function(err, res) {
-            console.log("GOT ERR?", err);
-            console.log("GOT RES?", res);
-        });
-    }));
-
+      res.json(res2);
+          });
 
 }
+
+
 
 

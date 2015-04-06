@@ -102,7 +102,8 @@ paths:
             # a pointer to a definition
             $ref: "#/definitions/HelloWorldResponse"
         # responses may fall through to errors
-        default:
+        #default:
+        "401":
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
@@ -119,8 +120,10 @@ definitions:
     required:
       - message
     properties:
-      message:
+      message: 
         type: string
+        description: "Wrong token. Please try again"
+
 
 securityDefinitions:
   oauth2:
