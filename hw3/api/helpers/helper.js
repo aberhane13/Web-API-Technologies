@@ -5,6 +5,6 @@
         };
 
         function passwordCheck(username, password, cb) {
-          var passwordOk = (username === 'scott' && password === 'apigee');
+          var passwordOk = (username === 'default' && password === '123');
           cb(null, passwordOk);
         }
