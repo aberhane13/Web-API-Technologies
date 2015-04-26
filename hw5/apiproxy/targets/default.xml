@@ -6,7 +6,10 @@
         <Response/>
     </PreFlow>
     <Flows/>
-    <PostFlow name="PostFlow"/>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
     <ScriptTarget>
         <ResourceURL>node://server-usergrid.js</ResourceURL>
         <Properties/>

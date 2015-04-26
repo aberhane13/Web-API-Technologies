@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="true" enabled="true" name="__extract-statistics-request__">
+    <!-- Created by the Custom Analytics Collection tool on: Sat Apr 25 2015 21:27:12 GMT-0600 (Mountain Daylight Time) -->
+    <DisplayName>Extract Statistics Request</DisplayName>
+    <QueryParam name="title">
+        <Pattern ignoreCase="true">{_title}</Pattern>
+    </QueryParam>
+</ExtractVariables>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="1" name="hw5">
+<APIProxy revision="7" name="hw5">
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1429668570109</CreatedAt>
+    <CreatedAt>1430018748409</CreatedAt>
     <CreatedBy>abel.berhane13@gmail.com</CreatedBy>
     <Description></Description>
     <DisplayName>hw5</DisplayName>
-    <LastModifiedAt>1429861572167</LastModifiedAt>
+    <LastModifiedAt>1430022885549</LastModifiedAt>
     <LastModifiedBy>abel.berhane13@gmail.com</LastModifiedBy>
-    <Policies/>
+    <Policies>
+        <Policy>__collect-statistics-request__</Policy>
+        <Policy>__extract-statistics-request__</Policy>
+    </Policies>
     <ProxyEndpoints>
         <ProxyEndpoint>default</ProxyEndpoint>
     </ProxyEndpoints>
